@@ -1,0 +1,134 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath} 
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{cancel}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fancyvrb}
+\usepackage[paperwidth=8.5in,paperheight=11in,margin=1in]{geometry}
+
+\pagestyle{fancy}
+\lhead{Peter Williams}
+\chead{Reverberation Mapping Project Notes}
+\rhead{\today}
+
+\begin{document}
+\section*{Chapter 1}
+
+\section*{Chapter 2}
+
+\section*{Chapter 3}
+\begin{itemize}
+\item Stellar parallax: 
+\begin{equation}
+d = \frac{1\text{ AU}}{\tan p} \approx \frac{1}{p}\text{ AU}
+\end{equation}
+\begin{itemize}
+\item parsec: distance when parallax angle is 1 arcsecond.
+\item Hipparcos (ESA): accuracies approaching 0.001$^{\prime\prime}$
+\item Gaia: accuracies approaching 4 microarcsec
+\end{itemize}
+\item apparent magnitude:
+\begin{itemize}
+\item difference of 5 magnitudes = factor of 100 difference in brightness $\Longrightarrow$ $100^{1/5} = 2.512$
+\item Solar constant: 1.4 kW m$^{-2}$
+\item
+\begin{equation}
+\frac{F_2}{F_1} = 100^{(m_1-m_2)/5} \Longrightarrow m_1 - m_2 = -2.5\log_{10}\left(\frac{F_1}{F_2}\right)
+\end{equation}
+\end{itemize}
+\item absolute magnitude:
+\begin{itemize}
+\item apparent magnitude at 10 kpc
+\item distance modulus
+\begin{align*}
+100^{(m - M)/5} = \frac{F_{10}}{F} = \left(\frac{d}{10\text{ pc}}\right)^2 &\Longrightarrow d = 10^{(m - M + 5)/5}\text{ pc} \\
+&\Longrightarrow m - M = 5\log_{10}(d) - 5 = 5\log_{10}\left(\frac{d}{10\text{ pc}}\right)
+\end{align*}
+\end{itemize}
+\item Double slit experiment:
+\begin{itemize}
+\item spacing $d$ between slits, distance $L$ to screen. At angle $\theta$, extra path length of $d\sin\theta$ for far slit $\Longrightarrow$ bright if $d\sin\theta = n\lambda$, dark if $d\sin\theta = (n - \frac{1}{2})\lambda$.
+\end{itemize}
+\item Poynting vector:
+\begin{equation}
+\bm{S} = \frac{1}{\mu_0}\bm{E}\times\bm{B}\text{ (SI)} = \frac{c}{4\pi}\bm{E}\times\bm{B}\text{ (cgs)}
+\end{equation}
+\begin{itemize}
+\item radiation pressure:
+\begin{align*}
+F_{rad} &= \frac{\langle S\rangle A}{c}\cos\theta\,\,\,\,\,\,\,\,\,\,\text{(absorption)}\\
+F_{rad} &= \frac{2\langle S\rangle A}{c}\cos^2\theta\,\,\,\,\,\,\,\,\,\,\text{(reflection)}
+\end{align*}
+\end{itemize}
+\item Blackbodies:
+\begin{itemize}
+\item Wien's displacement law:
+\begin{equation}
+\lambda_\text{max} T = 0.002897755\text{ m K}
+\end{equation}
+\item Stefan-Boltzmann equation:
+\begin{equation}
+L = A\sigma T^4,\,\,\,\,\,\,\sigma = 5.67\times 10^{-8}\text{ W m}^{-2}\text{K}^{-4}.
+\end{equation}
+\item Rayleigh-Jeans law: works for $\lambda$ large. Take oven with distance $L$ between walls, then can have standing waves with wavelength $\lambda = 2L/1, 2L/2, 2L/3, 2L/4, 2L/5, \dots,$ each wavelength with energy $kT$. Then (DERIVATION --- LEARN)
+\begin{equation}
+B_\lambda(T)\approx\frac{2ckT}{\lambda^4}
+\end{equation}
+\item Wien's approximation: works for $\lambda$ small. (DERIVATION --- LEARN)
+\begin{equation}
+B_\lambda(T) \approx a \lambda^{-5} e^{-b/\lambda T}
+\end{equation}
+\item Planck:
+\begin{equation}
+B_\lambda(T) = \frac{a/\lambda^5}{e^{b/kT} - 1}
+\end{equation}
+Assume energy must be quantized: $nh\nu$. (DERIVATION --- LEARN)
+\begin{equation}
+B_\lambda(T) = \frac{2hc^2/\lambda^5}{e^{hc/\lambda k T} - 1}
+\end{equation}
+$\lambda = c/\nu$, so $d\lambda = c/\nu^2 d\nu$:
+\begin{equation}
+B_\nu(T) = \frac{2 h \nu^3/c^2}{e^{h\nu/k T} - 1}
+\end{equation}
+\end{itemize}
+\item Color index
+\begin{align*}
+U - B &= M_U - M_B \\
+B - V &= M_B - M_V
+\end{align*}
+\begin{itemize}
+\item Bolometric correction:
+\begin{equation}
+BC = m_\text{bol} - V = M_\text{bol} - M_V
+\end{equation}
+\item Sensitivity function $S(\lambda)$
+\begin{equation}
+U = -2.5\log_{10}\left(\int_0^\infty F_\lambda S_U d\lambda\right)+C_U
+\end{equation}
+$C_U$ chosen such that Vega has magnitude zero in each filter.
+\begin{equation}
+U - B = -2.5\log_{10}\left(\frac{\int F_\lambda S_U d\lambda}{\int F_\lambda S_B d\lambda}\right)+C_{U-B},\,\,\,\,\,\,C_{U-B} \equiv C_U - C_B
+\end{equation}
+\item *** Color index does not depend on distance, so it is a measure solely of the temperature of a model blackbody star
+\end{itemize}
+\end{itemize}
+
+\section*{Chapter 4}
+
+\section*{Chapter 5}
+
+\section*{Chapter 6}
+
+\section*{Chapter 7}
+
+\section*{Chapter 8}
+
+\section*{Chapter 9}
+
+\section*{Chapter 10}
+
+\end{document}
