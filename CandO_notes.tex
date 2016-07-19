@@ -60,8 +60,8 @@ d = \frac{1\text{ AU}}{\tan p} \approx \frac{1}{p}\text{ AU}
 \begin{itemize}
 \item radiation pressure:
 \begin{align*}
-F_{rad} &= \frac{\langle S\rangle A}{c}\cos\theta\,\,\,\,\,\,\,\,\,\,\text{(absorption)}\\
-F_{rad} &= \frac{2\langle S\rangle A}{c}\cos^2\theta\,\,\,\,\,\,\,\,\,\,\text{(reflection)}
+F_{rad} &= \frac{\langle S\rangle A}{c}\cos\theta~~~~~~~~~\text{(absorption)}\\
+F_{rad} &= \frac{2\langle S\rangle A}{c}\cos^2\theta~~~~~~\text{(reflection)}
 \end{align*}
 \end{itemize}
 \item Blackbodies:
@@ -72,7 +72,7 @@ F_{rad} &= \frac{2\langle S\rangle A}{c}\cos^2\theta\,\,\,\,\,\,\,\,\,\,\text{(r
 \end{equation}
 \item Stefan-Boltzmann equation:
 \begin{equation}
-L = A\sigma T^4,\,\,\,\,\,\,\sigma = 5.67\times 10^{-8}\text{ W m}^{-2}\text{K}^{-4}.
+L = A\sigma T^4,~~~~\sigma = 5.67\times 10^{-8}\text{ W m}^{-2}\text{K}^{-4}.
 \end{equation}
 \item Rayleigh-Jeans law: works for $\lambda$ large. Take oven with distance $L$ between walls, then can have standing waves with wavelength $\lambda = 2L/1, 2L/2, 2L/3, 2L/4, 2L/5, \dots,$ each wavelength with energy $kT$. Then (DERIVATION --- LEARN)
 \begin{equation}
@@ -111,13 +111,124 @@ U = -2.5\log_{10}\left(\int_0^\infty F_\lambda S_U d\lambda\right)+C_U
 \end{equation}
 $C_U$ chosen such that Vega has magnitude zero in each filter.
 \begin{equation}
-U - B = -2.5\log_{10}\left(\frac{\int F_\lambda S_U d\lambda}{\int F_\lambda S_B d\lambda}\right)+C_{U-B},\,\,\,\,\,\,C_{U-B} \equiv C_U - C_B
+U - B = -2.5\log_{10}\left(\frac{\int F_\lambda S_U d\lambda}{\int F_\lambda S_B d\lambda}\right)+C_{U-B},~~C_{U-B} \equiv C_U - C_B
 \end{equation}
 \item *** Color index does not depend on distance, so it is a measure solely of the temperature of a model blackbody star
 \end{itemize}
 \end{itemize}
 
 \section*{Chapter 4}
+\begin{itemize}
+\item Galilean transformations:
+\begin{eqnarray}
+x^\prime &= &x - ut \\
+y^\prime &= &y \\
+z^\prime &= &z \\
+t^\prime &= &t
+\end{eqnarray}
+\begin{equation}
+\bf{v}^\prime = \bf{v} - \bf{u},~~\bf{a}^\prime = \bf{a}
+\end{equation}
+
+\item Michelson-Morley Experiment - no ether
+
+\item Lorentz transformations:
+\begin{eqnarray}
+x^\prime &= &\frac{x - ut}{\sqrt{1 - u^2/c^2}} \\
+y^\prime &= &y \\
+z^\prime &= &z \\
+t^\prime &= &\frac{t - ux/c^2}{\sqrt{1 - u^2/c^2}}
+\end{eqnarray}
+\begin{equation}
+\gamma \equiv \frac{1}{\sqrt{1-u^2/c^2}}
+\end{equation}
+\begin{itemize}
+\item Time dilation:
+\begin{equation}
+\Delta t_\text{moving} = \frac{\Delta t_\text{rest}}{\sqrt{1-u^2/c^2}}
+\end{equation}
+\item Length contraction:
+\begin{equation}
+L_\text{moving} = L_\text{rest}\sqrt{1-u^2/c^2}
+\end{equation}
+\item Relativistic Doppler shift:
+\begin{equation}
+\nu_\text{obs} = \frac{\nu_\text{rest}\sqrt{1-u^2/c^2}}{1+(u/c)\cos\theta} = \frac{\nu_\text{rest}\sqrt{1-u^2/c^2}}{1+v_r/c}
+\end{equation}
+\begin{equation}
+\Longrightarrow \nu_\text{obs} = \nu_\text{rest}\sqrt{\frac{1 - v_r/c}{1+v_r/c}} ~~~~~~~(\text{radial motion})
+\end{equation}
+***Note that there is still a transverse Doppler shift
+\end{itemize}
+\item Cosmological redshift:
+\begin{equation}
+z\equiv \frac{\lambda_\text{obs} - \lambda_\text{rest}}{\lambda_\text{rest}} = \frac{\Delta \lambda}{\lambda_\text{rest}}
+\end{equation}
+\begin{itemize}
+\item For $u/c << 1$, $z\approx v_r/c$.
+\end{itemize}
+\item Velocity transformations:
+\begin{eqnarray}
+v_x^\prime &= &\frac{v_x - u}{1 - uv_x/c^2} \\
+v_y^\prime &= &\frac{v_y\sqrt{1 - u^2/c^2}}{1 - uv_x/c^2} \\
+v_z^\prime &= &\frac{v_z\sqrt{1 - u^2/c^2}}{1 - uv_x/c^2}
+\end{eqnarray}
+\item Relativistic beaming: Consider a light source moving in the positive $x$-direction with relativistic speed $u$. Consider light ray traveling in the $y$ direction (at speed $c$) in the light source's rest frame. Then
+\begin{equation}
+v_x = \frac{v_x^\prime + u}{1 - uv_x^\prime/c^2} = u
+\end{equation}
+\begin{equation}
+v_y = \frac{v_y^\prime\sqrt{1-u^2/c^2}}{1+uv_x^\prime/c^2} = c\sqrt{1 - u^2/c^2}
+\end{equation}
+\begin{equation}
+v_z = \frac{v_z^\prime\sqrt{1 - u^2/c^2}}{1 + u v_x^\prime/c^2} = 0
+\end{equation}
+\begin{equation}
+\Longrightarrow \sin\theta = v_y/c = \gamma^{-1}
+\end{equation}
+
+\item Relativistic momentum:
+\begin{equation}
+{\bf p} = \frac{m{\bf v}}{\sqrt{1 - v^2/c^2}} = \gamma m {\bf v}
+\end{equation}
+
+\item Relativstic kinetic energy:
+\begin{equation}
+K = \int_{x_i}^{x_f} F dx = \int_{x_i}^{x_f}\frac{dp}{dt}dx =  \int_{p_i}^{p_f}\frac{dx}{dt}{dp} = \int_{p_i}^{p_f} v dp
+\end{equation}
+Using $p_i = 0$ and integrating by parts, 
+\begin{align}
+K &= p_fv_f - \int_0^{v_f} p dv \\
+&= \frac{mv_f^2}{\sqrt{1 - v_f^2/c^2}} - \int_0^{v_f}\frac{m v}{\sqrt{1 - v^2/c^2}}dv \\
+&= \frac{mv_f^2}{\sqrt{1 - v_f^2/c^2}} + mc^2\left(\sqrt{1- v_f^2/c^2} - 1\right) \\
+&= mc^2\left(\frac{v_f^2/c^2 + 1 - v_f^2/c^2 - \sqrt{1 - v_f^2/c^2}}{\sqrt{1 - v_f^2/c^2}}\right) \\
+&= mc^2\left(\frac{1}{\sqrt{1 - v_f^2/c^2}} - 1\right) = mc^2(\gamma - 1)
+\end{align}
+\item Total relativistic energy:
+\begin{equation}
+E = \frac{ mc^2}{\sqrt{1 - v^2/c^2}} = \gamma m c^2
+\end{equation}
+\begin{equation}
+E^2 = p^2 c^2 + m^2 c^4
+\end{equation}
+\item Example: Two particles of mass $m$ and speed $v$ collide and merge to particle of mass $M$:\\
+Total energy of system is initially
+\begin{equation}
+E_{\text{sys},i} = 2\gamma m c^2
+\end{equation}
+and momentum is ${\bf p}_\text{sys}  =0$. After collision, $E_{\text{sys},f} = M c^2$. Equating initial and final energies:
+\begin{equation}
+2\gamma m c^2 = M c^2 \Longrightarrow M = 2 \gamma m,
+\end{equation}
+so \begin{equation}
+\Delta m = 2m(\gamma - 1).
+\end{equation}
+This is equal to the kinetic energy lost/$c^2$:
+\begin{equation}
+\frac{2 m c^2(\gamma - 1) - 0}{c^2} = \Delta m
+\end{equation}
+
+\end{itemize}
 
 \section*{Chapter 5}
 
