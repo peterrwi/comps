@@ -278,13 +278,107 @@ K_\text{max} = E_\text{photon} - \phi
 \item Hydrogen lines:
 \begin{equation}
 \frac{1}{\lambda} = R_H\left(\frac{1}{m^2} - \frac{1}{n^2}\right),
-\end{equation}
+\end{equation}	
 $R_H = 1.097\times 10^7 \text{ m}^{-1} =$ Rydberg constant
 \begin{figure}[h!]
 \centering
 \includegraphics[width=5in]{hydrogen_lines.png}
 \end{figure}
+\item Bohr model: angular momentum is quantized - $L = n\hbar$
+\begin{equation}
+{\bf F} = \frac{1}{4\pi\epsilon_0}\frac{q_1q_2}{r^2}\hat{\bf r}~~(\text{SI}) = \frac{q_1q_2}{r^2}\hat{\bf r}~~(\text{cgs})
+\end{equation}
+Coulomb force equals centripetal force:
+\begin{equation}
+\frac{q_1q_2}{r^2}\hat{\bf r} = -\mu \frac{v^2}{r}\hat{\bf r}
+\end{equation}
+\begin{equation}
+\Longrightarrow K = \frac{1}{2}\mu v^2 = \frac{1}{2}\frac{e^2}{r}
+\end{equation}
+Potential energy is
+\begin{equation}
+U = -\frac{e^2}{r} = -2K
+\end{equation}
+So, 
+\begin{equation}
+E = K+U = K - 2K = -K = -\frac{e^2}{r}
+\end{equation}
+Requiring quantization of angular momentum:
+\begin{equation}
+L = \mu v r = n \hbar
+\end{equation}
+\begin{equation}
+\Longrightarrow K = \frac{1}{2}\frac{e^2}{r} = \frac{1}{2}\mu v^2 = \frac{1}{2}\frac{(\mu v r)^2}{\mu r^2} = \frac{1}{2}\frac{(n\hbar)^2}{\mu r^2}
+\end{equation}
+\begin{equation}
+\Longrightarrow r_n = \frac{\hbar^2}{\mu e^2}n^2 = a_0 n^2,
+\end{equation}
+$a_0 = 5.29\times 10^{-11}\text{ m}$.
+\begin{equation}
+\Longrightarrow E_n = -13.6\text{ eV}\frac{1}{n^2}
+\end{equation}
+\item de Broglie: Wave-partical duality of everything, not just light: $\nu = E/h$, $\lambda = h/p$
 
+\item Heisenberg's uncertainty principle:
+\begin{equation}
+\Delta x \Delta p \ge \frac{1}{2}\hbar
+\end{equation}
+\begin{equation}
+\Delta E \Delta t \ge \frac{1}{2} \hbar
+\end{equation}
+
+\item Schr\"odinger
+\begin{equation}
+L = \sqrt{l(l+1)}\hbar,~~~l = 0, 1, 2, \dots, n-1
+\end{equation}
+$z$-component of angular momentum vector, $L_z$ can only assume
+\begin{equation}
+L_z = m_l \hbar,~~~m_l = -l,-l+1, \dots, l-1, l
+\end{equation}
+\item Zeeman effect: splitting of spectral lines in weak magnetic field:
+\begin{equation}
+\nu = \nu_0~~~~~\text{ and }~~~~~\nu_0\pm\frac{eB}{4\pi\mu}
+\end{equation}
+\item Spin:
+\begin{equation}
+S = \sqrt{\frac{1}{2}\left(\frac{1}{2}+1\right)}\hbar = \frac{\sqrt{3}}{2}\hbar,
+\end{equation}
+$z$-component
+\begin{equation}
+S_z = m_s\hbar,~~~m_s = \pm\frac{1}{2}
+\end{equation}
+\item Pauli exclusion principle: no two electrons can share the same set of four quantum numbers
+\item Dirac:
+\begin{itemize}
+\item Fermions: 
+\begin{itemize}
+\item electrons, protons, neutrons
+\item spin of $(n+1)\hbar/2$, $n\in\mathbb{Z}$
+\item obey Pauli exclusion principle
+\end{itemize}
+\item Bosons:
+\begin{itemize}
+\item ex. photons
+\item spin of $n\hbar$, $n\in\mathbb{Z}$
+\item do not obey the Pauli exclusion principle
+\end{itemize}
+\item predicted antiparticles
+\begin{itemize}
+\item identical, except for opposite electric charges and magnetic moments
+\item Can be created from energy of gamma-ray photons, and can annihilate
+\end{itemize}
+\end{itemize}
+\item Selection rules:
+\begin{itemize}
+\item $\Delta l = \pm 1$
+\item $\Delta m_l = 0$ or $\pm 1$
+\end{itemize}
+\begin{itemize}
+\item Allowed transitions: can happen spontaneously on timescales of 10$^{-8}$ s
+\item Forbidden transitions: can occur, but require much longer times if they are to occur with any significant probability
+\\**Low gas densities are required for measurable intensities to be observed from forbidden transitions since collisions trigger transitions
+\\ -- ISM or outer atmospheres of stars
+\end{itemize}
 \end{itemize}
 
 \section*{Chapter 6}
