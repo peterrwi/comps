@@ -16,11 +16,11 @@
 \rhead{\today}
 
 \begin{document}
-\section*{Chapter 1}
+\section{The Celestial Sphere}
 
-\section*{Chapter 2}
+\section{Celestial Mechanics}
 
-\section*{Chapter 3}
+\section{The Continuous Spectrum of Light}
 \begin{itemize}
 \item Stellar parallax: 
 \begin{equation}
@@ -117,7 +117,7 @@ U - B = -2.5\log_{10}\left(\frac{\int F_\lambda S_U d\lambda}{\int F_\lambda S_B
 \end{itemize}
 \end{itemize}
 
-\section*{Chapter 4}
+\section{The Theory of Special Relativity}
 \begin{itemize}
 \item Galilean transformations:
 \begin{eqnarray}
@@ -230,7 +230,7 @@ This is equal to the kinetic energy lost/$c^2$:
 
 \end{itemize}
 
-\section*{Chapter 5}
+\section{The Interaction of Light and Matter}
 \begin{itemize}
 \item Fraunhofer lines: 1814
 \item Kirchoff's laws:
@@ -282,7 +282,7 @@ K_\text{max} = E_\text{photon} - \phi
 $R_H = 1.097\times 10^7 \text{ m}^{-1} =$ Rydberg constant
 \begin{figure}[h!]
 \centering
-\includegraphics[width=5in]{hydrogen_lines.png}
+\includegraphics[width=5in]{CandOfigs/hydrogen_lines.png}
 \end{figure}
 \item Bohr model: angular momentum is quantized - $L = n\hbar$
 \begin{equation}
@@ -376,12 +376,191 @@ S_z = m_s\hbar,~~~m_s = \pm\frac{1}{2}
 \begin{itemize}
 \item Allowed transitions: can happen spontaneously on timescales of 10$^{-8}$ s
 \item Forbidden transitions: can occur, but require much longer times if they are to occur with any significant probability
-\\**Low gas densities are required for measurable intensities to be observed from forbidden transitions since collisions trigger transitions
+\\ **Low gas densities are required for measurable intensities to be observed from forbidden transitions since collisions trigger transitions
 \\ -- ISM or outer atmospheres of stars
 \end{itemize}
 \end{itemize}
 
-\section*{Chapter 6}
+\section{Telescopes}
+\begin{itemize}
+\item Snell's law:
+\begin{equation}
+n_{1,\lambda}\sin\theta_1 = n_{2,\theta}\sin\theta_2,
+\end{equation}
+$n_\lambda \equiv c/v_\lambda$
+\item Focal point: point at which rays converge
+\item Focal length, $f$: positive for a converging lens, negative for a diverging lens
+\item Lensmaker's formula:
+\begin{equation}
+\frac{1}{f_\lambda} = (n_\lambda - 1)\left(\frac{1}{R_1} + \frac{1}{R_2}\right),
+\end{equation}
+where $R_1$ and $R_2$ are the radii of curvature of each surface. Positive if convex, negative if concave.
+\item ***For mirrors, $f$ is wavelength independent since 
+\item ***For a spheroidal mirror, $f = R/2$
+\item Focal plane: plane passing through the focal point and oriented perpendicular to the optical axis
+\item Two point sources separated by angle $\theta$ will be separated by
+\begin{equation}
+y = f\tan \theta \approx f\theta
+\end{equation}
+on the focal plane.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=3in]{CandOfigs/pointsources_focalplane.png}
+\end{figure}
+\item Plate scale:
+\begin{equation}
+\frac{d\theta}{dy} = \frac{1}{f}
+\end{equation}
+\item Rayleigh Criterion:
+\begin{equation}
+\theta_\text{min} = 1.22\frac{\lambda}{D}
+\end{equation}
+\begin{itemize}
+\item Single slit diffraction:\\
+Slit of width $D$, consider rays from edge of slit and center of slit: Leads to destructive interference when
+\begin{equation}
+\frac{D}{2}\sin\theta = \frac{1}{2}\lambda
+\end{equation}
+Can divide into four segments to get destructive interference when
+\begin{equation}
+\frac{D}{4}\sin\theta = \frac{1}{2}\lambda
+\end{equation}
+Put together, destructive interference at
+\begin{equation}
+\sin\theta = m\frac{\lambda}{D},~~~m=1,2,3,\dots
+\end{equation}
+\item Airy disk: In 2D, $m$ describes maxima and minima and is no longer integer:
+\begin{figure}[h!]
+\centering
+\includegraphics[width=3in]{CandOfigs/airyrings.png}
+\end{figure}
+\end{itemize}
+
+\item Seeing: resolution suffers from atmospheric turbulence
+\begin{itemize}
+\item Mauna Kea: $0.5^{\prime\prime}$ to $0.6^{\prime\prime}$ 50\% of the time, and $0.25^{\prime\prime}$ on the best nights
+\item Other sites with good seeing: Kitt Peak, Tenerife and La Palma of the Canary Islands, several sites in the Chilean Andes Mountains (Cerro Tololo Inter-American Observatory, the Cerro La Silla and Cerro Paranal sites of the ESO, and Cerro Pach\'on, location of Gemini South)
+\end{itemize}
+\item Aberrations
+\begin{itemize}
+\item Chromatic aberration: focal length is wavelength dependent. Can use correcting lenses to diminish this effect
+\item Spherical aberration: Not all areas of surfaces will focus parallel rays to a single point. Can use paraboloid instead, but more expensive. ***This was the problem with Hubble
+\item Coma: elongated images of point sources that lie off the optical axis because of focal length dependence on $\theta$
+\item Astigmatism: different parts of a lens or mirror converge an image at slightly different locations on the focal plane. Can design a lens to correct for astigmatism, but then....
+\item curvature of field: focuses images on a curve rather than on a plane.
+\item Distortion of field: when the plate scale depends on the distance from the optical axis
+\end{itemize}
+
+\item Brightness of Image
+\begin{figure}[h!]
+\centering
+\includegraphics[width=5in]{CandOfigs/objectandimagesolidangles.png}
+\end{figure}
+\begin{itemize}
+\item If surface area $dA_O$ of object at distance $r$ has surface intensity $I_O$, then energy per second per unit wavelength radiated into telescope with solid angle $d\Omega_{T,O}$ is
+\begin{equation}
+I_O d\Omega_{T,O} dA_O = I_O\left(\frac{A_T}{r^2}\right)dA_O,
+\end{equation}
+where $A_T$ is the area of telescope's aperture. Also, all the photons emitted going into solid angle $\Omega_{T,O}$ will strike an area $dA_{i}$ on the focal plane, 
+\begin{equation}
+I_O d\Omega_{T,O} dA_O = I_i d\Omega_{T,i} dA_{i},
+\end{equation}
+where $I_i$ is the image intensity and $d\Omega_{T,i}$ is the solid angle defined by the telescope's aperture as seen from the image.
+\begin{equation}
+\Longrightarrow  I_O\left(\frac{A_T}{r^2}\right)dA_O = I_i\left(\frac{A_T}{f^2}\right)dA_i
+\end{equation}
+\begin{equation}
+\Longrightarrow I_i = I_O\left(\frac{dA_O/r^2}{dA_i/f^2}\right)
+\end{equation}
+If we look {\textit from} the lens, $d\Omega_{O,T} = d\Omega_{i,T}$, so 
+\begin{equation}
+\frac{dA_O}{r^2} = \frac{d A_i}{f^2}
+\end{equation}
+\begin{equation}
+\Longrightarrow I_i = I_O
+\end{equation}
+This shows that the image intensity is identical to the object intensity, independent of the area of the aperture.
+\end{itemize}
+\item Illumination $J$: the amount of light energy per second focused onto a unit area of the resolved image, so 
+\begin{equation}
+J \propto D^2/f^2
+\end{equation}
+\item Focal ratio:
+\begin{equation}
+F \equiv \frac{f}{D} \Longrightarrow J \propto	\frac{1}{F^2}
+\end{equation}
+--Keck: $f = 17.5\text{ m}$, $D = 10\text{ m}$ $\Longrightarrow F = 1.75$
+
+\item Optical telescopes:
+\begin{itemize}
+\item Refracting:
+\begin{itemize}
+\item Objective (primary) lens with $f_\text{obj}$ and eyepiece which magnifies:
+\begin{equation}
+m = \frac{f_\text{obj}}{f_\text{eye}}
+\end{equation}
+\item Limited in size by deformation due to gravity -- need to support primary. Deformation will change according to orientation
+\item Hard to construct lens sufficiently free of defects -- large volume to perfect
+\item Defects must be kept less than $\sim\lambda/20$
+\item Slow thermal response and a lot of thermal expansion
+\item Lots of torque with large detectors
+\end{itemize}
+\item Reflecting:
+\begin{itemize}
+\item Only one surface to perfect
+\item Reduce weight with honeycomb  structure
+\item Can support from back of mirror and so can use pressure pads to correct for distortions
+\item Prime focus is in the path of incoming light
+\item Schmidt telescopes: Wide angle field of view $\sim$several degrees
+\begin{figure}[h!]
+\centering
+\includegraphics[width=6in]{CandOfigs/telescopetypes.png}
+\end{figure}
+\end{itemize}
+\item Mounts
+\begin{itemize}
+\item Equatorial: 
+\begin{itemize}
+\item Polar axis, so simply need to rotate to adjust ra
+\item Expensive and difficult to build for large telescopes
+\end{itemize}
+\item Altitude-azimuth:
+\begin{itemize}
+\item motion parallel and perpendicular to horizon
+\item Tracking of objects requires continuous calculation
+\end{itemize}
+\end{itemize}
+\item AO:
+\begin{itemize}
+\item deformable mirror with piezoelectric crystals on back
+\item Micrometer-size adjustments, several hundred times per second
+\item Use guide star to determine adjustments
+\item If no guide star, use laser, exciting sodium atoms $\sim90$ km altitude
+\item Good for near-infrared because of longer wavelengths
+\end{itemize}
+\item Space-based:
+\begin{itemize}
+\item Hubble:
+\begin{itemize}
+\item 2.4-m, $f$/24
+\item down to 30th magnitude
+\item 120 nm to 1 $\mu$m -- UV to infrared
+\item Ritchey-Chr\'etien -- (hyperbolic primary, Cassegrain)
+\end{itemize}
+\item JWST:
+\begin{itemize}
+\item 6-m
+\item 600 nm to 28 $\mu$m
+\item Located at L2 (away from Sun)
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\item Radio telescopes
+\begin{itemize}
+\item 
+\end{itemize}
+\end{itemize}
+
 
 \section*{Chapter 7}
 
