@@ -381,7 +381,7 @@ S_z = m_s\hbar,~~~m_s = \pm\frac{1}{2}
 \end{itemize}
 \end{itemize}
 
-\section{Telescopes}
+\section{Telescopes: Insert Ian's book here}
 \begin{itemize}
 \item Snell's law:
 \begin{equation}
@@ -634,12 +634,96 @@ P = S A \Delta\nu
 \end{itemize}
 
 
-\section*{Chapter 7}
+\section{Binary Systems and Stellar Parameters}
+\begin{itemize}
+\item Optical double: Two stars along the same line of sight, but not actually a binary
+\item Visual binary: Can be resolved independently
+\item Astrometric binary: Can only see one star, but know the other one is there by observing oscillatory motion
+\item Eclipsing binary: See dip in light curve when one star passes in front of (and behind) the other. Can determine relative effective temperature and radii of each star
+\item Spectrum binary: Two superimpuosed spectra, one blueshifted, the other redshifted.
+\item Spectroscopic binary: Is there a difference here...?
+\item Ratio of masses can be found from ratio of angular separation:
+\begin{equation}
+\frac{m_1}{m_2} = \frac{r_2}{r_1} = \frac{a_2}{a_1}
+\end{equation}
+Distance to the observer $d$, then angles
+\begin{equation}
+\alpha = \frac{a}{d}
+\end{equation}
+so 
+\begin{equation}
+\frac{m_1}{m_2} = \frac{\alpha_2}{\alpha_1}
+\end{equation}
+If inclined by $i$ degrees, $\alpha_{measured}\rightarrow \alpha \cos i$, which cancels. But, affects Kepler's law:
+\begin{equation}
+m_1 + m_2 = \frac{4\pi^2}{G}\frac{a^3}{P^2} = \frac{4\pi^2}{G}\left(\frac{d}{\cos i}\right)^3\frac{\alpha_{measured}^3}{P^2}
+\end{equation}
+Can deduce $i$ by observing how center of mass location deviates from focus location.
+\item Many spectroscopic binaries have nearly circular orbits because close binaries circularize orbits due to tidal interactions -- timescales that are short compared to lifetimes
+\item For small eccentricity, $v \sim$ constant, $v_1 = 2\pi a_1/P$.
+\begin{equation}
+\frac{m_1}{m_2} = \frac{v_2}{v_1} = \frac{v_{2,r}}{v_{1,r}}
+\end{equation}
+To find masses:
+\begin{equation}
+a = a_1+ a_2 = \frac{P}{2\pi}(v_1 + v_2)
+\end{equation}
+\end{itemize}
 
-\section*{Chapter 8}
+\section{The Classification of Stellar Spectra}
+\begin{itemize}
+\item Early-type - beginning of OBAFGKM
+\item Late-type - end of OBAFGKM
+\item K0 -- early K star
+\item B9 -- late B star
+\item Henry Draper Catalogue -- HD stars
+\begin{figure}[h!]
+\centering
+\includegraphics[width = 5in]{CandOfigs/spectraltypes.png}
+\end{figure}
+\item Probability of being in state $b$ or $a$:
+\begin{equation}
+\frac{P(s_b)}{P(s_a)} = \frac{e^{-E_b/kT}}{e^{-E_a/kT}} = e^{-(E_b - E_a)/kT},
+\end{equation}
+$e^{-E_b/kT}$ is the boltzmann factor.
+\item For 300 K, $kT \approx 1/40$ eV.
+\item Statistical weights $g$ to account for degeneracy
+\item Degeneracy of energy level $n$ of hydrogen is $2n^2$.
+\begin{equation}
+\Longrightarrow \frac{P(E_b)}{P(E_a)} = \frac{g_b e^{-E_b/kT}}{g_a e^{-E_a/kT}} = \frac{g_b}{g_a} e^{-(E_b - E_a)/kT}
+\end{equation}
+\item For large numbers of atoms, boltzmann equation:
+\begin{equation}
+\frac{N_b}{N_a} = \frac{g_b e^{-E_b/kT}}{g_a e^{-E_a/kT}} = \frac{g_b}{g_a} e^{-(E_b - E_a)/kT}
+\end{equation}
+\item Partition function
+\begin{equation}
+Z = \sum_{j=1}^{\infty} g_j e^{-(E_j - E_1)/kT}
+\end{equation}
+\begin{equation}
+\frac{N_{i+1}}{N_i} = \frac{2 Z_{i+1}}{n_e Z_i}\left(\frac{2\pi m_e k T}{h^2}\right)^{3/2} e^{-\chi_i/kT}
+\end{equation}
+\end{itemize}
 
 \section*{Chapter 9}
 
 \section*{Chapter 10}
+
+\section{The Milky Way Galaxy}
+\begin{itemize}
+\item Interstellar extinction:
+\begin{equation}
+d = 10^{(m_\lambda - M_\lambda - A_\lambda + 5)/5},
+\end{equation}
+where $A_\lambda$ is the amount of extinction in magnitudes.
+\begin{itemize}
+\item In the Milky Way disk, $A_\text{visible}\sim 1$ magnitude kpc$^{-1}$.
+\item Example: Star with $M_V = -4.0$ observed to have $V = +8.2$. The amount of extinction along the line of sight is 1 mag kpc$^{-1}$, so $A_V = kd$ mag, where $k = 10^{-3}$ mag pc$^{-1}$. Thus,
+\begin{equation}
+d = 10^{(V - M_V - kd + 5)/5} = 2800\times 10^{-kd/5}\text{ pc}
+\end{equation}
+Solve iteratively or graphically to get $d = 1400$ pc.
+\end{itemize}
+\end{itemize}
 
 \end{document}
